@@ -12,32 +12,32 @@
   body {
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
-    background-color: #001F3F; /* Fondo azul marino */
+    background-color: #001F3F;
     color: white;
-    overflow-x: hidden; /* Evita el movimiento horizontal al hacer scroll */
+    overflow-x: hidden;
   }
 
   header {
     background-image: url('imagenes/icono empresa.jpg');
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
-    background-blend-mode: darken; /* Aplica oscurecimiento al fondo */
-    background-size: 0px; /* Ajusta la imagen al tamaño del contenedor */
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    background-size: 0px;
     background-position: center;
     text-align: center;
-    padding: 50px 0; /* Reducción del espacio superior */
+    padding: 50px 0;
     color: white;
-    position: relative; /* Mantiene el banner en su lugar */
-    z-index: -1; /* Coloca el banner detrás del contenido */
+    position: relative;
+    z-index: -1;
   }
 
   .logo {
     position: absolute;
     top: 20px;
-    right: 20px; /* Cambio de posición a la derecha */
+    right: 20px;
     width: 80px;
     height: 80px;
-    border-radius: 50%; /* Forma circular */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Efecto de sombra */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
 
   .container {
@@ -53,15 +53,15 @@
   p.subtitle {
     font-size: 18px;
     margin-bottom: 20px;
-    text-decoration: underline; /* Efecto de subrayado */
-    text-decoration-color: #aa2fcf; /* Color del subrayado */
-    text-decoration-thickness: 2px; /* Grosor del subrayado */
+    text-decoration: underline;
+    text-decoration-color: #aa2fcf;
+    text-decoration-thickness: 2px;
   }
 
   p* {
     font-size: 16px;
     margin-bottom: 15px;
-    text-align: left; /* Alineación justificada del párrafo */
+    text-align: left;
   }
 
   b {
@@ -72,8 +72,6 @@
     position: fixed;
     bottom: 20px;
     left: 20px;
-    background-color: #25D366;
-    color: white;
     width: 60px;
     height: 60px;
     line-height: 60px;
@@ -87,7 +85,32 @@
 
   .whatsapp-button:hover {
     transform: scale(1.1);
-    background-color: #128C7E;
+  }
+
+  .whatsapp-button img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .whatsapp-bubble {
+    display: none;
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: #ffffff;
+    color: rgb(3, 3, 3);
+    padding: 10px;
+    border-radius: 80px;
+    font-size: 14px;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+
+  .whatsapp-button:hover .whatsapp-bubble {
+    display: block;
   }
 
   footer {
@@ -138,7 +161,8 @@
 </header>
 
 <a href="https://wa.link/l6alot" target="_blank" class="whatsapp-button">
-  <img src="imagenes/icono-whatsapp.png" alt="WhatsApp" style="width: 100%; height: 100%;">
+  <div class="whatsapp-bubble">¿En qué podemos ayudarte? 🚀</div>
+  <img src="imagenes/icono-whatsapp.png" alt="WhatsApp">
 </a>
 
 <section id="quienes-somos" class="container">
@@ -162,3 +186,5 @@
 </script>
 </body>
 </html>
+
+
